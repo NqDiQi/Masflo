@@ -45,7 +45,7 @@ export default function Hero() {
       >
         <h1
           style={{
-            fontSize: "36px",
+            fontSize: "50px",
             fontWeight: 300,
             color: "#0A2540",
             maxWidth: "760px",
@@ -59,7 +59,7 @@ export default function Hero() {
         <p
           style={{
             marginTop: "16px",
-            fontSize: "15px",
+            fontSize: "20px",
             color: "#475569",
             maxWidth: "560px",
           }}

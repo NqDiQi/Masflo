@@ -21,21 +21,19 @@ body {
 /* ===============================
    HEADER
 =============================== */
-
 .site-header {
   border-bottom: 1px solid #e5e7eb;
+  width: 100%;
 }
 
 .header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 14px 40px;
-
+  max-width: 100%; /* 👈 ĐỔI 1200px THÀNH 100% */
+  margin: 0; /* 👈 ĐỔI margin-left: 20px THÀNH margin: 0 */
+  padding: 14px 40px; /* Padding tạo khoảng cách thay vì margin */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  position: relative;
 }
-
 /* Logo – GIỮ NGUYÊN */
 
 .logo {
@@ -65,11 +63,12 @@ body {
   display: flex;
   align-items: center;
   gap: 36px;
+  margin-left: auto !important;
 }
 
 .main-nav a,
 .product-btn {
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 600; /* 👈 ĐẬM HƠN – FIX NHẠT */
   color: #0a2540;
   text-decoration: none;
@@ -124,7 +123,7 @@ body {
 
 .product-dropdown a {
   padding: 10px 18px;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 500;
   color: #0a2540;
   text-decoration: none;
