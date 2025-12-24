@@ -63,8 +63,8 @@ export default function ExplorePumps() {
             <Image
               src={pump.image}
               alt={pump.title}
-              width={180} // 👈 GIẢM
-              height={140} // 👈 GIẢM
+              width={250} // 👈 GIẢM
+              height={180} // 👈 GIẢM
               style={{ margin: "0 auto 20px" }}
             />
 
