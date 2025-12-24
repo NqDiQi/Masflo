@@ -1,0 +1,341 @@
+export type Product = {
+  name: string;
+  category: string;
+  image: string;
+  slug: string;
+  power?: string;
+  usage?: string;
+  specs?: string[];
+};
+
+export const products: Product[] = [
+  // Industrial Pumps
+  {
+    name: "BC Pump",
+    category: "industrial",
+    image: "/images/products/industrial/bc-pump.jpg",
+    slug: "bc-pump",
+    usage: "General industrial water supply and circulation.",
+    specs: ["Robust design", "Suitable for continuous duty"],
+  },
+  {
+    name: "China SCP Split Case",
+    category: "industrial",
+    image: "/images/products/industrial/china-scp-split-case.jpg",
+    slug: "china-scp-split-case",
+    usage: "Large flow applications such as HVAC and fire fighting.",
+    specs: ["Split case design", "High efficiency"],
+  },
+  {
+    name: "Close Coupling MMP",
+    category: "industrial",
+    image: "/images/products/industrial/close-coupling-mmp.jpg",
+    slug: "close-coupling-mmp",
+    usage: "Compact pump for small industrial systems.",
+    specs: ["Close coupled motor", "Easy installation"],
+  },
+  {
+    name: "End Suction MES MMB",
+    category: "industrial",
+    image: "/images/products/industrial/end-suction-mes-mmb.jpg",
+    slug: "end-suction-mes-mmb",
+    usage: "Standard end suction pump for water transfer.",
+    specs: ["Single stage", "Reliable operation"],
+  },
+  {
+    name: "End Suction Norm",
+    category: "industrial",
+    image: "/images/products/industrial/end-suction-norm.jpg",
+    slug: "end-suction-norm",
+    usage: "General purpose end suction pump.",
+    specs: ["DIN standard dimensions", "Versatile use"],
+  },
+  {
+    name: "Horizontal MH MHI MBI MBN",
+    category: "industrial",
+    image: "/images/products/industrial/horizontal-mh-mhi-mbi-mbn.jpg",
+    slug: "horizontal-mh-mhi-mbi-mbn",
+    usage: "Horizontal multistage pump for high pressure.",
+    specs: ["Multistage design", "High head applications"],
+  },
+  {
+    name: "Monobloc MB MBS",
+    category: "industrial",
+    image: "/images/products/industrial/monobloc-mb-mbs.jpg",
+    slug: "monobloc-mb-mbs",
+    usage: "Compact monobloc pump for industrial water.",
+    specs: ["Space saving", "Direct coupled motor"],
+  },
+  {
+    name: "Multistage KAT",
+    category: "industrial",
+    image: "/images/products/industrial/multistage-kat.jpg",
+    slug: "multistage-kat",
+    usage: "High pressure multistage pump for process industries.",
+    specs: ["High head", "Multiple impellers"],
+  },
+  {
+    name: "Single Stage MEP",
+    category: "industrial",
+    image: "/images/products/industrial/single-stage-mep.jpg",
+    slug: "single-stage-mep",
+    usage: "Single stage pump for general water transfer.",
+    specs: ["Simple design", "Easy maintenance"],
+  },
+  {
+    name: "Split Case CEP",
+    category: "industrial",
+    image: "/images/products/industrial/split-case-cep.jpg",
+    slug: "split-case-cep",
+    usage: "High capacity split case pump.",
+    specs: ["Double suction", "High efficiency"],
+  },
+  {
+    name: "Split Case HS HT",
+    category: "industrial",
+    image: "/images/products/industrial/split-case-hs-ht.jpg",
+    slug: "split-case-hs-ht",
+    usage: "Heavy duty split case pump for large installations.",
+    specs: ["Durable construction", "Continuous operation"],
+  },
+  {
+    name: "Self Priming Pump MSP",
+    category: "industrial",
+    image: "/images/products/industrial/self-priming-pump-msp.jpg",
+    slug: "self-priming-pump-msp",
+    usage: "Self-priming pump for drainage and wastewater.",
+    specs: ["No foot valve required", "Quick priming"],
+  },
+
+  // Booster Pumps
+  {
+    name: "Drive Booster Package",
+    category: "booster",
+    image: "/images/products/booster/drive-booster-package.jpg",
+    slug: "drive-booster-package",
+    usage: "Pressure boosting for high-rise buildings.",
+    specs: ["Automatic control", "Compact skid package"],
+  },
+  {
+    name: "Silent Booster MSS",
+    category: "booster",
+    image: "/images/products/booster/silent-booster-mss.jpg",
+    slug: "silent-booster-mss",
+    usage: "Low-noise booster system.",
+    specs: ["Noise reduction design", "Energy efficient"],
+  },
+
+  // Fire Fighting
+  {
+    name: "Fire Pump Sets",
+    slug: "fire-pump-sets",
+    category: "fire",
+    image: "/images/products/fire/fire-pump-sets.jpg",
+    usage: "Reliable fire protection pump systems for industrial buildings.",
+    specs: [
+      "Compliant with NFPA standards",
+      "Electric / Diesel driven options",
+      "High reliability in emergency operation",
+    ],
+  },
+  {
+    name: "ULFM Fire Pump",
+    category: "fire",
+    image: "/images/products/fire/ulfm-fire-pump.jpg",
+    slug: "ulfm-fire-pump",
+    usage: "UL/FM certified fire pump.",
+    specs: ["UL/FM approval", "High reliability"],
+  },
+
+  // Sewage & Wastewater
+  {
+    name: "Sewage CAP",
+    category: "sewage",
+    image: "/images/products/sewage/sewage-cap.jpg",
+    slug: "sewage-cap",
+    usage: "Submersible sewage pump for domestic use.",
+    specs: ["Clog-resistant impeller", "Compact design"],
+  },
+  {
+    name: "Sewage DAC SC Y",
+    category: "sewage",
+    image: "/images/products/sewage/sewage-dac-sc-y.jpg",
+    slug: "sewage-dac-sc-y",
+    usage: "Industrial sewage pump with cutter.",
+    specs: ["Cutter impeller", "Heavy duty motor"],
+  },
+  {
+    name: "Sewage DAS",
+    category: "sewage",
+    image: "/images/products/sewage/sewage-das.jpg",
+    slug: "sewage-das",
+    usage: "General sewage transfer.",
+    specs: ["Durable casing", "Reliable operation"],
+  },
+  {
+    name: "Sewage DSB DHS",
+    category: "sewage",
+    image: "/images/products/sewage/sewage-dsb-dhs.jpg",
+    slug: "sewage-dsb-dhs",
+    usage: "High flow sewage pump.",
+    specs: ["Large capacity", "Continuous duty"],
+  },
+  {
+    name: "Sewage Grinder PARPO",
+    category: "sewage",
+    image: "/images/products/sewage/sewage-grinder-parpo.jpg",
+    slug: "sewage-grinder-parpo",
+    usage: "Grinder pump for sewage with solids.",
+    specs: ["Grinder impeller", "Handles tough solids"],
+  },
+  {
+    name: "Sewage Large MSL",
+    category: "sewage",
+    image: "/images/products/sewage/sewage-large-msl.jpg",
+    slug: "sewage-large-msl",
+    usage: "Large sewage pump for municipal systems.",
+    specs: ["High capacity", "Robust design"],
+  },
+  {
+    name: "Sewage MS",
+    category: "sewage",
+    image: "/images/products/sewage/sewage-ms.jpg",
+    slug: "sewage-ms",
+    usage: "Compact sewage pump.",
+    specs: ["Easy installation", "Reliable motor"],
+  },
+  {
+    name: "Sewage Submersible",
+    category: "sewage",
+    image: "/images/products/sewage/sewage-submersible.jpg",
+    slug: "sewage-submersible",
+    usage: "Submersible sewage pump.",
+    specs: ["Waterproof motor", "Continuous operation"],
+  },
+  {
+    name: "Sewage XD Series",
+    category: "sewage",
+    image: "/images/products/sewage/sewage-xd-series.jpg",
+    slug: "sewage-xd-series",
+    usage: "Heavy duty sewage pump series.",
+    specs: ["Multiple models", "High durability"],
+  },
+  // Vertical & Inline Pumps
+  {
+    name: "Vertical Centrifugal MIP",
+    category: "vertical-inline",
+    image: "/images/products/vertical-inline/vertical-centrifugal-mip.jpg",
+    slug: "vertical-centrifugal-mip",
+    usage: "Vertical centrifugal inline pump for general water circulation.",
+    specs: ["Compact design", "Reliable operation"],
+  },
+  {
+    name: "Vertical Inline MIL",
+    category: "vertical-inline",
+    image: "/images/products/vertical-inline/vertical-inline-mil.jpg",
+    slug: "vertical-inline-mil",
+    usage: "Inline pump suitable for HVAC and chilled water systems.",
+    specs: ["Energy efficient", "Easy installation"],
+  },
+  {
+    name: "Vertical Multistage MV MVI MVN",
+    category: "vertical-inline",
+    image:
+      "/images/products/vertical-inline/vertical-multistage-mv-mvi-mvn.jpg",
+    slug: "vertical-multistage-mv-mvi-mvn",
+    usage: "Multistage vertical inline pump for high pressure applications.",
+    specs: ["High head", "Multiple impellers"],
+  },
+  {
+    name: "Vertical Multistage MV MVI",
+    category: "vertical-inline",
+    image: "/images/products/vertical-inline/vertical-multistage-mv-mvi.jpg",
+    slug: "vertical-multistage-mv-mvi",
+    usage: "Compact multistage inline pump for industrial use.",
+    specs: ["Durable casing", "Continuous duty"],
+  },
+  {
+    name: "Vertical Multistage Stainless",
+    category: "vertical-inline",
+    image: "/images/products/vertical-inline/vertical-multistage-stainless.jpg",
+    slug: "vertical-multistage-stainless",
+    usage: "Stainless steel vertical multistage pump for clean water.",
+    specs: ["Corrosion resistant", "Hygienic design"],
+  },
+  {
+    name: "Vertical Multistage XVM",
+    category: "vertical-inline",
+    image: "/images/products/vertical-inline/vertical-multistage-xvm.jpg",
+    slug: "vertical-multistage-xvm",
+    usage: "High efficiency vertical multistage pump for municipal systems.",
+    specs: ["Robust shaft", "High efficiency"],
+  },
+
+  // Submersible Pumps
+  {
+    name: "Mixed Flow Axial DAC",
+    category: "submersible",
+    image: "/images/products/submersible/mixed-flow-axial-dac.jpg",
+    slug: "mixed-flow-axial-dac",
+    usage:
+      "Submersible mixed flow pump for irrigation, drainage, and flood control.",
+    specs: ["High flow capacity", "Low to medium head", "Axial flow impeller"],
+  },
+  {
+    name: "Propeller DAC EK",
+    category: "submersible",
+    image: "/images/products/submersible/propeller-dac-ek.jpg",
+    slug: "propeller-dac-ek",
+    usage: "Propeller type submersible pump for large water transfer.",
+    specs: [
+      "Very high flow rate",
+      "Low head applications",
+      "Efficient propeller design",
+    ],
+  },
+  {
+    name: "Turbine Pump EKS",
+    category: "submersible",
+    image: "/images/products/submersible/turbine-pump-eks.jpg",
+    slug: "turbine-pump-eks",
+    usage: "Vertical turbine submersible pump for deep well water supply.",
+    specs: ["High head capability", "Multiple stages", "Durable construction"],
+  },
+  {
+    name: "Turbine Pump MVP",
+    category: "submersible",
+    image: "/images/products/submersible/turbine-pump-mvp.jpg",
+    slug: "turbine-pump-mvp",
+    usage:
+      "Submersible turbine pump for municipal and industrial water systems.",
+    specs: [
+      "Reliable operation",
+      "Handles large volumes",
+      "Vertical turbine design",
+    ],
+  },
+  {
+    name: "Turbine Pump",
+    category: "submersible",
+    image: "/images/products/submersible/turbine-pump.jpg",
+    slug: "turbine-pump",
+    usage: "General turbine pump for deep well and high lift applications.",
+    specs: [
+      "High efficiency",
+      "Adaptable to different depths",
+      "Robust shaft and bearings",
+    ],
+  },
+  {
+    name: "Well Pump MP",
+    category: "submersible",
+    image: "/images/products/submersible/well-pump-mp.jpg",
+    slug: "well-pump-mp",
+    usage: "Submersible well pump for domestic and agricultural water supply.",
+    specs: [
+      "Compact design",
+      "Suitable for deep wells",
+      "Continuous duty motor",
+    ],
+  },
+];
