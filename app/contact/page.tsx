@@ -15,7 +15,7 @@ export default function ContactPage() {
           <p>
             Tel: +33 175 379 736
             <br />
-            Web: <a href="https://Masflo.com">www.Masflo.com</a>
+            Web: <a href="https://Masflo.com">www.masflo.com</a>
             <br />
             Email: <a href="mailto:info@masflo.com">info@masflo.com</a>
           </p>

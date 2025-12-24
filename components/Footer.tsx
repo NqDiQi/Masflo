@@ -39,7 +39,7 @@ export default function Footer() {
         <div
           style={{
             textAlign: "right",
-            fontSize: "13px",
+            fontSize: "16px",
             fontWeight: 600,
             color: "#0a2540",
             lineHeight: 1.7,
@@ -54,7 +54,7 @@ export default function Footer() {
           <div>Tel: +33 175 379 736</div>
 
           <div>
-            Web: www.Masflo.com
+            Web: www.masflo.com
             <br />
             Contact: info@masflo.com
           </div>
