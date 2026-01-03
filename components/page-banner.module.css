@@ -1,0 +1,64 @@
+.banner {
+  position: relative;
+  height: 360px;
+  margin-top: 80px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #0a2540;
+  color: white;
+}
+
+/* TEXT BLOCK – ÉP TRÁI TUYỆT ĐỐI */
+.text {
+  position: absolute; /* 🔥 mấu chốt */
+  top: 0;
+  left: 0;
+
+  z-index: 2;
+  max-width: 640px;
+  padding: 96px 80px;
+
+  text-align: left;
+}
+
+.text h1 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.text p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #e2e8f0;
+  max-width: 520px;
+}
+
+/* IMAGE */
+.image {
+  position: absolute;
+  inset: 0;
+  opacity: 0.32;
+}
+
+.image img {
+  object-fit: cover;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    padding: 120px 0 80px;
+  }
+
+  .text {
+    position: relative; /* mobile cho rơi xuống */
+    padding: 0 32px;
+  }
+
+  .text h1 {
+    font-size: 32px;
+  }
+}

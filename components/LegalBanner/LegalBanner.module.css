@@ -1,0 +1,25 @@
+.legalBanner {
+  background: linear-gradient(135deg, #1f6fa9 0%, #0f4f7d 100%);
+  padding: 120px 24px 96px;
+}
+
+.legalBannerInner {
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+.legalBanner h1 {
+  font-size: 42px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.legalBanner p {
+  font-size: 18px;
+  color: #dbeafe;
+  max-width: 640px;
+  line-height: 1.6;
+}

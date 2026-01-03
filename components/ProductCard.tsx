@@ -1,32 +1,46 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
+import { useReveal } from "@/hooks/useReveal";
 
 type Props = {
   name: string;
   image: string;
   href: string;
+  index?: number;
 };
 
-export default function ProductCard({ name, image, href }: Props) {
+export default function ProductCard({ name, image, href, index = 0 }: Props) {
+  const ref = useReveal<HTMLDivElement>();
+
   return (
-    <Link
-      href={href}
-      className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition block bg-white"
+    <div
+      ref={ref}
+      className={`reveal delay-${(index % 5) + 1}`}
+      style={{
+        willChange: "transform, opacity",
+      }}
     >
-      {/* Khung ảnh nhỏ gọn */}
-      <div className="flex items-center justify-center p-4 bg-gray-50">
-        <Image
+      <Link href={href} style={{ textDecoration: "none", color: "inherit" }}>
+        <img
           src={image}
           alt={name}
-          width={href.includes("/fire/") ? 220 : 180} // nếu là fire thì to hơn
-          height={href.includes("/fire/") ? 160 : 150}
-          className="object-contain"
+          style={{
+            width: "100%",
+            borderRadius: "16px",
+          }}
         />
-      </div>
-      {/* Tên bơm */}
-      <div className="p-4 text-center">
-        <h3 className="font-semibold text-sm">{name}</h3>
-      </div>
-    </Link>
+        <h3
+          style={{
+            marginTop: "16px",
+            fontSize: "16px",
+            fontWeight: 500,
+            color: "#0A2540",
+          }}
+        >
+          {name}
+        </h3>
+      </Link>
+    </div>
   );
 }

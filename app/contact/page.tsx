@@ -1,45 +1,42 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
 
-  // 👇 AUTO HIDE SAU 5 GIÂY
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  /* ✨ SCROLL ANIMATION */
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("contact-show");
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  /* AUTO HIDE STATUS */
   useEffect(() => {
     if (status === "success" || status === "error") {
-      const timer = setTimeout(() => {
-        setStatus("idle");
-      }, 5000);
-
+      const timer = setTimeout(() => setStatus("idle"), 5000);
       return () => clearTimeout(timer);
     }
   }, [status]);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("loading");
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (res.ok) {
-      setStatus("success");
-      form.reset();
-    } else {
-      setStatus("error");
-    }
-  }
-
   return (
-    <section className="contact-section">
+    <section ref={sectionRef} className="contact-section contact-hidden">
       <div className="contact-container">
         {/* LEFT */}
         <div className="contact-info">
@@ -54,7 +51,7 @@ export default function ContactPage() {
           <p>
             Tel: +33 175 379 736
             <br />
-            Web: <a href="https://www.masflo.com">www.Masflo.com</a>
+            Web: <a href="https://www.masflo.com">www.masflo.com</a>
             <br />
             Email: <a href="mailto:info@masflo.com">info@masflo.com</a>
           </p>
@@ -93,31 +90,27 @@ export default function ContactPage() {
 
               const res = await fetch("/api/contact", {
                 method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
               });
 
               if (res.ok) {
-                alert(
-                  "✅ Message sent successfully. We will contact you shortly."
-                );
+                alert("✅ Message sent successfully.");
                 form.reset();
               } else {
-                alert("❌ Failed to send message. Please try again.");
+                alert("❌ Failed to send message.");
               }
             }}
           >
-            <input name="name" type="text" placeholder="Your name" required />
+            <input name="name" placeholder="Your name" required />
             <input
               name="email"
               type="email"
               placeholder="Your email"
               required
             />
-            <input name="subject" type="text" placeholder="Subject" />
-            <textarea name="message" placeholder="Message" rows={6} required />
+            <input name="subject" placeholder="Subject" />
+            <textarea name="message" rows={6} placeholder="Message" required />
             <button type="submit">Submit</button>
           </form>
         </div>

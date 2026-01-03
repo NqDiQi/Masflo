@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 const items = [
   { title: "Industrial", image: "/applications/industrial.jpg" },
@@ -8,9 +11,22 @@ const items = [
 ];
 
 export default function WhereMasfloWorks() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => entry.isIntersecting && setShow(true),
+      { threshold: 0.2 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section style={{ padding: "100px 24px" }}>
       <h2
+        className={`reveal ${show ? "reveal-show" : ""}`}
         style={{
           textAlign: "center",
           fontSize: "28px",
@@ -22,6 +38,7 @@ export default function WhereMasfloWorks() {
       </h2>
 
       <div
+        ref={ref}
         style={{
           marginTop: "56px",
           maxWidth: "1200px",
@@ -31,14 +48,17 @@ export default function WhereMasfloWorks() {
           gap: "24px",
         }}
       >
-        {items.map((item) => (
+        {items.map((item, i) => (
           <div
             key={item.title}
+            className={`reveal reveal-delay-${i + 1} ${
+              show ? "reveal-show" : ""
+            }`}
             style={{
               position: "relative",
               borderRadius: "18px",
               overflow: "hidden",
-              height: "220px", // 👈 GIẢM Ở ĐÂY
+              height: "220px",
             }}
           >
             <Image
@@ -62,7 +82,7 @@ export default function WhereMasfloWorks() {
                 bottom: "16px",
                 left: "16px",
                 color: "#fff",
-                fontSize: "16px", // 👈 chữ nhỏ lại chút
+                fontSize: "16px",
                 fontWeight: 500,
               }}
             >

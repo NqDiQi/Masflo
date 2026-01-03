@@ -585,3 +585,229 @@ a:hover {
   opacity: 0.6;
   cursor: not-allowed;
 }
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* mobile: 1 */
+  gap: 32px;
+  margin-top: 80px;
+}
+
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* tablet: 2 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr); /* laptop/desktop: 4 */
+  }
+}
+.legalContent {
+  max-width: 1100px;
+  margin: 64px auto;
+  padding: 0 24px;
+}
+
+.legalContent section {
+  margin-bottom: 40px;
+}
+
+.legalContent h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.legalContent p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+/* LEGAL PAGE BASE */
+.legalContent {
+  max-width: 900px;
+  margin: 96px auto;
+  padding: 0 24px;
+}
+
+/* SECTION */
+.legalContent section {
+  margin-bottom: 56px;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: legalFadeUp 0.6s ease forwards;
+}
+
+/* STAGGER */
+.legalContent section:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.legalContent section:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.legalContent section:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.legalContent section:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.legalContent section:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.legalContent section:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.legalContent section:nth-child(7) {
+  animation-delay: 0.35s;
+}
+.legalContent section:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+/* TEXT */
+.legalContent h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0a2540;
+  margin-bottom: 12px;
+}
+
+.legalContent p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #334155;
+}
+
+/* KEYFRAMES */
+@keyframes legalFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== SCROLL APPEAR ANIMATION ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+/* ===== APPLE STYLE REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* delay tạo sóng */
+.reveal.delay-1 {
+  transition-delay: 0.05s;
+}
+.reveal.delay-2 {
+  transition-delay: 0.1s;
+}
+.reveal.delay-3 {
+  transition-delay: 0.15s;
+}
+.reveal.delay-4 {
+  transition-delay: 0.2s;
+}
+.reveal.delay-5 {
+  transition-delay: 0.25s;
+}
+/* CONTACT SCROLL ANIMATION */
+.contact-hidden {
+  opacity: 0;
+  transform: scale(0.97) translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+/* HERO ANIMATION */
+.hero-hidden {
+  opacity: 0;
+}
+
+.hero-show {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+/* text animation */
+.hero-content h1 {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero-show .hero-content h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-content p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s;
+}
+
+.hero-show .hero-content p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* typography giữ sang */
+.hero-content h1 {
+  font-size: 50px;
+  font-weight: 300;
+  color: #0a2540;
+  max-width: 760px;
+  line-height: 1.3;
+}
+
+.hero-content p {
+  margin-top: 16px;
+  font-size: 20px;
+  color: #475569;
+  max-width: 560px;
+}
+/* ===============================
+   SCROLL REVEAL (GLOBAL)
+=============================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger support */
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}

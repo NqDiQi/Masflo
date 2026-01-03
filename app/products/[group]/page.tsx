@@ -42,25 +42,29 @@ export default async function ProductGroupPage({ params }: PageProps) {
       <main className="hero">
         <div
           style={{
-            marginTop: "56px",
             width: "100%",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
-            gap: "32px",
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 32px",
           }}
         >
-          {filteredProducts.map((p) => {
-            const slug = p.slug || p.name.toLowerCase().replace(/\s+/g, "-");
-
-            return (
+          <div
+            className="products-grid"
+            style={{
+              columnGap: "56px",
+              rowGap: "80px",
+            }}
+          >
+            {filteredProducts.map((p, i) => (
               <ProductCard
-                key={p.name}
+                key={p.slug}
                 name={p.name}
                 image={p.image}
-                href={`/products/${group}/${slug}`}
+                href={`/products/${p.category}/${p.slug}`}
+                index={i}
               />
-            );
-          })}
+            ))}
+          </div>
         </div>
       </main>
     </>

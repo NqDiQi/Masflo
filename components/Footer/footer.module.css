@@ -1,0 +1,149 @@
+.footer {
+  background: #ffffff;
+  color: #111;
+  padding: 80px 24px 32px;
+}
+
+/* ===== TOP ===== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+}
+
+/* BRAND */
+.brand {
+  max-width: 380px;
+}
+
+.brand img {
+  margin-bottom: 16px;
+}
+
+.companyName {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0a2540;
+}
+
+.companyInfo div {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* CERTIFICATION */
+.cert {
+  margin-top: 24px;
+}
+
+/* ép next/image */
+.cert span {
+  display: block !important;
+}
+
+.cert img {
+  width: 180px !important;
+  height: auto !important;
+  opacity: 0.9;
+}
+
+/* COLUMNS */
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col h4 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: #0a2540;
+}
+
+.col a {
+  font-size: 15px;
+  color: #444;
+  text-decoration: none;
+  margin-bottom: 14px;
+}
+
+.col a:hover {
+  color: #000;
+}
+
+/* ===== BOTTOM ===== */
+.bottom {
+  max-width: 1200px;
+  margin: 56px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 28px;
+}
+
+.bottomLinks a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.bottomLinks a:hover {
+  color: #0f172a;
+}
+/* ===== TAP ANIMATION ===== */
+@keyframes tap {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.94);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ===== APPLY TO ALL CLICKABLE ===== */
+
+/* link */
+.footer a {
+  display: inline-block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* next/image wrapper */
+.brand span,
+.certSmall span {
+  display: inline-block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+
+/* hover */
+.footer a:hover,
+.brand span:hover,
+.certSmall span:hover {
+  transform: scale(1.04);
+}
+
+/* click */
+.footer a:active,
+.brand span:active,
+.certSmall span:active {
+  animation: tap 0.22s ease;
+  opacity: 0.85;
+}

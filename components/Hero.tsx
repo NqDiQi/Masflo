@@ -1,6 +1,16 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setShow(true), 100);
+    return () => clearTimeout(t);
+  }, []);
+
   return (
     <section
       style={{
@@ -9,13 +19,17 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Background image */}
+      {/* Background image – GIỮ NGUYÊN */}
       <Image
         src="/images/hero/hero-pumps.jpg"
         alt="Premium Pump Solutions"
         fill
         priority
-        style={{ objectFit: "cover" }}
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+          objectPosition: "center", // 👈 không zoom thêm
+        }}
       />
 
       {/* Overlay */}
@@ -43,6 +57,7 @@ export default function Hero() {
           padding: "0 24px",
         }}
       >
+        {/* TITLE */}
         <h1
           style={{
             fontSize: "50px",
@@ -50,18 +65,30 @@ export default function Hero() {
             color: "#0A2540",
             maxWidth: "760px",
             lineHeight: 1.3,
+
+            /* ✨ animation */
+            opacity: show ? 1 : 0,
+            transform: show ? "translateY(0)" : "translateY(24px)",
+            transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
           }}
         >
           Premium Pump Solutions <br />
           for Industry & Agriculture
         </h1>
 
+        {/* SUBTITLE */}
         <p
           style={{
             marginTop: "16px",
             fontSize: "20px",
             color: "#475569",
             maxWidth: "560px",
+
+            /* ✨ animation delay */
+            opacity: show ? 1 : 0,
+            transform: show ? "translateY(0)" : "translateY(24px)",
+            transition:
+              "opacity 0.8s ease-out 0.15s, transform 0.8s ease-out 0.15s",
           }}
         >
           Masflo delivers durable, efficient, and elegant pumping solutions

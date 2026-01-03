@@ -1,4 +1,7 @@
+"use client";
+
 import { ShieldCheck, Cog, Sparkles } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const items = [
   {
@@ -22,9 +25,22 @@ const items = [
 ];
 
 export default function WhyMasflo() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => entry.isIntersecting && setShow(true),
+      { threshold: 0.2 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section style={{ padding: "120px 24px" }}>
+    <section style={{ padding: "120px 24px" }} ref={ref}>
       <h2
+        className={`reveal ${show ? "reveal-show" : ""}`}
         style={{
           textAlign: "center",
           fontSize: "30px",
@@ -45,15 +61,17 @@ export default function WhyMasflo() {
           gap: "48px",
         }}
       >
-        {items.map((item) => {
+        {items.map((item, i) => {
           const Icon = item.icon;
           return (
-            <div key={item.title} style={{ textAlign: "center" }}>
-              <Icon
-                size={28} // 👈 icon nhỏ lại, tinh tế
-                strokeWidth={1.5}
-                color="#0A2540"
-              />
+            <div
+              key={item.title}
+              className={`reveal reveal-delay-${i + 1} ${
+                show ? "reveal-show" : ""
+              }`}
+              style={{ textAlign: "center" }}
+            >
+              <Icon size={28} strokeWidth={1.5} color="#0A2540" />
 
               <h3
                 style={{
