@@ -1,9 +1,6 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-// THÊM DÒNG NÀY ĐỂ DEBUG
-console.log("API Key exists:", !!process.env.RESEND_API_KEY);
-console.log("Key length:", process.env.RESEND_API_KEY?.length);
 // EMAIL TEST (email đăng ký Resend)
 const TEST_EMAIL = "duyquy04102006@gmail.com";
 
