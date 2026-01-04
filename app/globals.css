@@ -856,11 +856,11 @@ a:hover {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
-/* IMAGE – QUAN TRỌNG */
+/* IMAGE */
 .explore-card img {
   width: 100%;
-  height: 140px; /* 🔥 ÉP CHIỀU CAO */
-  object-fit: contain; /* 🔥 KHÔNG BỊ MÉO */
+  height: 140px;
+  object-fit: contain;
 }
 
 /* TITLE */
@@ -874,19 +874,19 @@ a:hover {
 /* 📱 MOBILE */
 @media (max-width: 768px) {
   .explore-grid {
-    grid-template-columns: 1fr 1fr; /* 2 cột */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
   .explore-card img {
-    height: 120px; /* nhỏ gọn hơn */
+    height: 120px;
   }
 }
 
 /* 📱 RẤT NHỎ */
 @media (max-width: 420px) {
   .explore-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* ✅ 1 HÀNG DỌC */
   }
 
   .explore-card img {

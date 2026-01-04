@@ -41,42 +41,22 @@ export default function ExplorePumps() {
   }, []);
 
   return (
-    <section
-      className="explore-section"
-      style={{ padding: "120px 24px" }}
-      ref={ref}
-    >
-      <h2
-        className={`reveal ${show ? "reveal-show" : ""}`}
-        style={{ textAlign: "center" }}
-      >
+    <section className="explore-section" ref={ref}>
+      <h2 className={`explore-title reveal ${show ? "reveal-show" : ""}`}>
         Explore Our Pumps
       </h2>
 
-      <div
-        className="explore-grid"
-        style={{
-          marginTop: "56px",
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gap: "32px",
-          maxWidth: "1200px",
-          marginInline: "auto",
-        }}
-      >
+      <div className="explore-grid">
         {pumps.map((pump, i) => (
           <Link
             key={pump.title}
             href={pump.href}
-            className={`reveal reveal-delay-${i + 1} ${
+            className={`explore-card reveal reveal-delay-${i + 1} ${
               show ? "reveal-show" : ""
             }`}
-            style={{ textAlign: "center" }}
           >
-            <Image src={pump.image} alt={pump.title} width={250} height={180} />
-            <div style={{ marginTop: "12px", fontWeight: 500 }}>
-              {pump.title}
-            </div>
+            <Image src={pump.image} alt={pump.title} width={300} height={200} />
+            <div className="explore-card-title">{pump.title}</div>
           </Link>
         ))}
       </div>
