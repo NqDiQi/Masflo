@@ -812,56 +812,61 @@ a:hover {
   transition-delay: 0.4s;
 }
 /* ===============================
-   EXPLORE OUR PUMPS – RESPONSIVE
+   EXPLORE OUR PUMPS – FIXED & CLEAN
 ================================ */
 
 .explore-section {
-  padding: 100px 24px;
-  overflow-x: hidden; /* 🔥 CHẶN LÒI */
+  padding: 80px 20px;
+  overflow-x: hidden;
 }
 
 .explore-title {
   text-align: center;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 600;
   color: #0a2540;
 }
 
 .explore-grid {
-  margin-top: 56px;
+  margin-top: 48px;
   max-width: 1200px;
   margin-inline: auto;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  gap: 28px;
 }
 
+/* CARD */
 .explore-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
-  border-radius: 18px;
-  background: #fff;
-  padding: 24px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .explore-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
+/* IMAGE – QUAN TRỌNG */
 .explore-card img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 140px; /* 🔥 ÉP CHIỀU CAO */
+  object-fit: contain; /* 🔥 KHÔNG BỊ MÉO */
 }
 
+/* TITLE */
 .explore-card-title {
-  margin-top: 16px;
-  font-size: 15px;
+  margin-top: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #0a2540;
 }
@@ -869,53 +874,22 @@ a:hover {
 /* 📱 MOBILE */
 @media (max-width: 768px) {
   .explore-grid {
-    grid-template-columns: 1fr 1fr; /* ✅ 2 cột */
+    grid-template-columns: 1fr 1fr; /* 2 cột */
     gap: 20px;
+  }
+
+  .explore-card img {
+    height: 120px; /* nhỏ gọn hơn */
   }
 }
 
 /* 📱 RẤT NHỎ */
 @media (max-width: 420px) {
   .explore-grid {
-    grid-template-columns: 1fr; /* ✅ 1 cột */
+    grid-template-columns: 1fr;
   }
-}
-/* ===============================
-   PRODUCTS GRID – MOBILE FIX
-================================ */
 
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-}
-
-/* 📱 MOBILE */
-@media (max-width: 768px) {
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr); /* ✅ 2 SP / hàng */
-    gap: 20px;
+  .explore-card img {
+    height: 140px;
   }
-}
-
-/* 📱 RẤT NHỎ */
-@media (max-width: 420px) {
-  .products-grid {
-    grid-template-columns: 1fr; /* ✅ 1 SP / hàng */
-  }
-}
-
-.product-card {
-  text-align: center;
-}
-
-.product-card img {
-  max-width: 100%;
-  height: auto;
-}
-
-.product-card-title {
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: 500;
 }
