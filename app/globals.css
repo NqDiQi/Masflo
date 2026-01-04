@@ -811,3 +811,111 @@ a:hover {
 .reveal-delay-4 {
   transition-delay: 0.4s;
 }
+/* ===============================
+   EXPLORE OUR PUMPS – RESPONSIVE
+================================ */
+
+.explore-section {
+  padding: 100px 24px;
+  overflow-x: hidden; /* 🔥 CHẶN LÒI */
+}
+
+.explore-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #0a2540;
+}
+
+.explore-grid {
+  margin-top: 56px;
+  max-width: 1200px;
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.explore-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  border-radius: 18px;
+  background: #fff;
+  padding: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.explore-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.explore-card-title {
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0a2540;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .explore-grid {
+    grid-template-columns: 1fr 1fr; /* ✅ 2 cột */
+    gap: 20px;
+  }
+}
+
+/* 📱 RẤT NHỎ */
+@media (max-width: 420px) {
+  .explore-grid {
+    grid-template-columns: 1fr; /* ✅ 1 cột */
+  }
+}
+/* ===============================
+   PRODUCTS GRID – MOBILE FIX
+================================ */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ 2 SP / hàng */
+    gap: 20px;
+  }
+}
+
+/* 📱 RẤT NHỎ */
+@media (max-width: 420px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* ✅ 1 SP / hàng */
+  }
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card-title {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
