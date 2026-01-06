@@ -17,19 +17,31 @@ export default function ProductCard({ name, image, href, index = 0 }: Props) {
     <div
       ref={ref}
       className={`reveal delay-${(index % 5) + 1}`}
-      style={{
-        willChange: "transform, opacity",
-      }}
+      style={{ willChange: "transform, opacity" }}
     >
       <Link href={href} style={{ textDecoration: "none", color: "inherit" }}>
-        <img
-          src={image}
-          alt={name}
+        {/* 👇 KHUNG ẢNH CỐ ĐỊNH */}
+        <div
           style={{
             width: "100%",
+            aspectRatio: "4 / 3", // 👈 đổi 1/1 nếu muốn vuông
+            overflow: "hidden",
             borderRadius: "16px",
+            backgroundColor: "transparent",
           }}
-        />
+        >
+          <img
+            src={image}
+            alt={name}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover", // 🔥 CHÌA KHÓA
+              display: "block",
+            }}
+          />
+        </div>
+
         <h3
           style={{
             marginTop: "16px",
