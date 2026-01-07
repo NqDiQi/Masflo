@@ -3,8 +3,12 @@
 import { useState } from "react";
 import { products } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ProductsPage() {
+  const { language } = useLanguage();
+  const isVI = language === "vi";
+
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<"az" | "za">("az");
 
@@ -22,7 +26,7 @@ export default function ProductsPage() {
         maxWidth: "1400px",
         margin: "0 auto",
         padding: "96px 32px",
-        display: "block", // ❗ cắt flex/global
+        display: "block",
       }}
     >
       <h1
@@ -32,7 +36,7 @@ export default function ProductsPage() {
           color: "#0A2540",
         }}
       >
-        All Products
+        {isVI ? "Toàn bộ sản phẩm" : "All Products"}
       </h1>
 
       {/* SEARCH + SORT */}
@@ -67,7 +71,7 @@ export default function ProductsPage() {
             style={{
               border: "1px solid #ddd",
               borderRadius: "999px",
-              padding: "10px 20px 10px 48px", // ⬅ padding trái lớn hơn
+              padding: "10px 20px 10px 48px",
               width: "280px",
             }}
           />
@@ -82,19 +86,19 @@ export default function ProductsPage() {
             padding: "10px 16px",
           }}
         >
-          <option value="az">Sort A–Z</option>
-          <option value="za">Sort Z–A</option>
+          <option value="az">{isVI ? "Sắp xếp A–Z" : "Sort A–Z"}</option>
+          <option value="za">{isVI ? "Sắp xếp Z–A" : "Sort Z–A"}</option>
         </select>
       </div>
 
-      {/* 🔥 PRODUCT GRID – ÉP CỨNG */}
+      {/* PRODUCT GRID */}
       <div
         style={{
           marginTop: "80px",
           display: "grid",
           gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-          columnGap: "56px", // khoảng cách ngang
-          rowGap: "80px", // khoảng cách dọc
+          columnGap: "56px",
+          rowGap: "80px",
         }}
       >
         {filteredProducts.map((p, i) => (

@@ -1,6 +1,7 @@
 import { products } from "@/data/products";
 import { productCategories } from "@/data/productCategories";
 import ProductCard from "@/components/ProductCard";
+import CategoryBannerTitle from "@/components/CategoryBannerTitle";
 
 type PageProps = {
   params: Promise<{ group: string }>;
@@ -28,17 +29,20 @@ export default async function ProductGroupPage({ params }: PageProps) {
 
   return (
     <>
-      {/* ✅ BANNER – CHỈ THÊM, KHÔNG ĐỤNG LOGIC */}
+      {/* ✅ BANNER */}
       <section
         className="banner"
         style={{ backgroundImage: `url(${category.background})` }}
       >
         <div className="section-title">
-          <span>{category.title}</span>
+          <CategoryBannerTitle
+            title={category.title}
+            titleVI={category.titleVI}
+          />
         </div>
       </section>
 
-      {/* ✅ PHẦN CŨ – GIỮ NGUYÊN */}
+      {/* ✅ PRODUCT GRID */}
       <main className="hero">
         <div
           style={{
