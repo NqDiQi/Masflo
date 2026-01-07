@@ -2,9 +2,12 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Hero() {
   const [show, setShow] = useState(false);
+  const { language } = useLanguage();
+  const isVI = language === "vi";
 
   useEffect(() => {
     const t = setTimeout(() => setShow(true), 100);
@@ -13,26 +16,17 @@ export default function Hero() {
 
   return (
     <section
-      style={{
-        height: "520px",
-        position: "relative",
-        overflow: "hidden",
-      }}
+      style={{ height: "520px", position: "relative", overflow: "hidden" }}
     >
-      {/* Background image – GIỮ NGUYÊN */}
       <Image
         src="/images/hero/hero-pumps.jpg"
         alt="Premium Pump Solutions"
         fill
         priority
         sizes="100vw"
-        style={{
-          objectFit: "cover",
-          objectPosition: "center", // 👈 không zoom thêm
-        }}
+        style={{ objectFit: "cover", objectPosition: "center" }}
       />
 
-      {/* Overlay */}
       <div
         style={{
           position: "absolute",
@@ -41,7 +35,6 @@ export default function Hero() {
         }}
       />
 
-      {/* Content */}
       <div
         style={{
           position: "relative",
@@ -57,7 +50,6 @@ export default function Hero() {
           padding: "0 24px",
         }}
       >
-        {/* TITLE */}
         <h1
           style={{
             fontSize: "50px",
@@ -65,34 +57,39 @@ export default function Hero() {
             color: "#0A2540",
             maxWidth: "760px",
             lineHeight: 1.3,
-
-            /* ✨ animation */
             opacity: show ? 1 : 0,
             transform: show ? "translateY(0)" : "translateY(24px)",
             transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
           }}
         >
-          Premium Pump Solutions <br />
-          for Industry & Agriculture
+          {isVI ? (
+            <>
+              Giải pháp bơm cao cấp <br />
+              cho công nghiệp & nông nghiệp
+            </>
+          ) : (
+            <>
+              Premium Pump Solutions <br />
+              for Industry & Agriculture
+            </>
+          )}
         </h1>
 
-        {/* SUBTITLE */}
         <p
           style={{
             marginTop: "16px",
             fontSize: "20px",
             color: "#475569",
             maxWidth: "560px",
-
-            /* ✨ animation delay */
             opacity: show ? 1 : 0,
             transform: show ? "translateY(0)" : "translateY(24px)",
             transition:
               "opacity 0.8s ease-out 0.15s, transform 0.8s ease-out 0.15s",
           }}
         >
-          Masflo delivers durable, efficient, and elegant pumping solutions
-          trusted across generations.
+          {isVI
+            ? "Masflo cung cấp các giải pháp bơm bền bỉ, hiệu quả và tinh tế, được tin dùng qua nhiều thế hệ."
+            : "Masflo delivers durable, efficient, and elegant pumping solutions trusted across generations."}
         </p>
       </div>
     </section>

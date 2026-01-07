@@ -2,29 +2,48 @@
 
 import { ShieldCheck, Cog, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const items = [
   {
-    title: "Engineered Excellence",
-    description:
-      "Precision-engineered pumps built for performance, durability, and long-term efficiency.",
+    title: {
+      en: "Engineered Excellence",
+      vi: "Kỹ thuật chế tạo vượt trội",
+    },
+    description: {
+      en: "Precision-engineered pumps built for performance, durability, and long-term efficiency.",
+      vi: "Máy bơm được thiết kế chính xác, tối ưu hiệu suất, độ bền và vận hành lâu dài.",
+    },
     icon: Cog,
   },
   {
-    title: "Trusted Across Generations",
-    description:
-      "Masflo solutions have powered industries and farms for decades with proven reliability.",
+    title: {
+      en: "Trusted Across Generations",
+      vi: "Được tin dùng qua nhiều thế hệ",
+    },
+    description: {
+      en: "Masflo solutions have powered industries and farms for decades with proven reliability.",
+      vi: "Giải pháp Masflo đã đồng hành cùng công nghiệp và nông nghiệp suốt nhiều thập kỷ.",
+    },
     icon: ShieldCheck,
   },
   {
-    title: "Elegant Design",
-    description:
-      "Clean, thoughtful engineering that balances form, function, and ease of maintenance.",
+    title: {
+      en: "Elegant Design",
+      vi: "Thiết kế tinh gọn",
+    },
+    description: {
+      en: "Clean, thoughtful engineering that balances form, function, and ease of maintenance.",
+      vi: "Thiết kế hài hòa giữa hình thức, công năng và dễ bảo trì.",
+    },
     icon: Sparkles,
   },
 ];
 
 export default function WhyMasflo() {
+  const { language } = useLanguage();
+  const isVI = language === "vi";
+
   const ref = useRef<HTMLDivElement>(null);
   const [show, setShow] = useState(false);
 
@@ -48,7 +67,7 @@ export default function WhyMasflo() {
           color: "#0A2540",
         }}
       >
-        Why Masflo
+        {isVI ? "Vì sao chọn Masflo" : "Why Masflo"}
       </h2>
 
       <div
@@ -65,7 +84,7 @@ export default function WhyMasflo() {
           const Icon = item.icon;
           return (
             <div
-              key={item.title}
+              key={item.title.en}
               className={`reveal reveal-delay-${i + 1} ${
                 show ? "reveal-show" : ""
               }`}
@@ -81,7 +100,7 @@ export default function WhyMasflo() {
                   color: "#0A2540",
                 }}
               >
-                {item.title}
+                {isVI ? item.title.vi : item.title.en}
               </h3>
 
               <p
@@ -92,7 +111,7 @@ export default function WhyMasflo() {
                   color: "#475569",
                 }}
               >
-                {item.description}
+                {isVI ? item.description.vi : item.description.en}
               </p>
             </div>
           );

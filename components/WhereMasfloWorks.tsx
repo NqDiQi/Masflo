@@ -2,15 +2,31 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const items = [
-  { title: "Industrial", image: "/applications/industrial.jpg" },
-  { title: "Agriculture", image: "/applications/agriculture.jpg" },
-  { title: "Fire Protection", image: "/applications/fire.jpg" },
-  { title: "Water Supply", image: "/applications/water.jpg" },
+  {
+    title: { en: "Industrial", vi: "Công nghiệp" },
+    image: "/applications/industrial.jpg",
+  },
+  {
+    title: { en: "Agriculture", vi: "Nông nghiệp" },
+    image: "/applications/agriculture.jpg",
+  },
+  {
+    title: { en: "Fire Protection", vi: "Phòng cháy chữa cháy" },
+    image: "/applications/fire.jpg",
+  },
+  {
+    title: { en: "Water Supply", vi: "Cấp nước" },
+    image: "/applications/water.jpg",
+  },
 ];
 
 export default function WhereMasfloWorks() {
+  const { language } = useLanguage();
+  const isVI = language === "vi";
+
   const ref = useRef<HTMLDivElement>(null);
   const [show, setShow] = useState(false);
 
@@ -34,7 +50,7 @@ export default function WhereMasfloWorks() {
           color: "#0A2540",
         }}
       >
-        Where Masflo Works
+        {isVI ? "Masflo hoạt động trong lĩnh vực nào" : "Where Masflo Works"}
       </h2>
 
       <div
@@ -50,7 +66,7 @@ export default function WhereMasfloWorks() {
       >
         {items.map((item, i) => (
           <div
-            key={item.title}
+            key={item.title.en}
             className={`reveal reveal-delay-${i + 1} ${
               show ? "reveal-show" : ""
             }`}
@@ -63,7 +79,7 @@ export default function WhereMasfloWorks() {
           >
             <Image
               src={item.image}
-              alt={item.title}
+              alt={isVI ? item.title.vi : item.title.en}
               fill
               style={{ objectFit: "cover" }}
             />
@@ -86,7 +102,7 @@ export default function WhereMasfloWorks() {
                 fontWeight: 500,
               }}
             >
-              {item.title}
+              {isVI ? item.title.vi : item.title.en}
             </div>
           </div>
         ))}

@@ -18,8 +18,20 @@ export const products: Product[] = [
     image: "/images/products/industrial/bc-pump.jpg",
     slug: "bc-pump",
     usage: "General industrial water supply and circulation.",
-    applications: ["Industrial", "Domestic", "Irrigation", "Agriculture", "Farms"],
-    specs: ["High operating efficiency", "Durable construction", "Designed for wide voltage operation", "Easy maintenance", "Continuous duty"],
+    applications: [
+      "Industrial",
+      "Domestic",
+      "Irrigation",
+      "Agriculture",
+      "Farms",
+    ],
+    specs: [
+      "High operating efficiency",
+      "Durable construction",
+      "Designed for wide voltage operation",
+      "Easy maintenance",
+      "Continuous duty",
+    ],
     specifications: [
       { label: "Power Range", value: "0.75 kW – 1.5 kW" },
       { label: "Voltage", value: "220V, 50Hz" },
@@ -35,7 +47,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "China SCP Split Case",
+    name: "Horizontal Split Case Pump",
     category: "industrial",
     image: "/images/products/industrial/china-scp-split-case.jpg",
     slug: "china-scp-split-case",
@@ -52,7 +64,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Close Coupling MMP",
+    name: "Close - Coupling Pump MMP",
     category: "industrial",
     image: "/images/products/industrial/close-coupling-mmp.jpg",
     slug: "close-coupling-mmp",
@@ -69,7 +81,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "End Suction MES MMB",
+    name: "End Suction Pump MES/MMB",
     category: "industrial",
     image: "/images/products/industrial/end-suction-mes-mmb.jpg",
     slug: "end-suction-mes-mmb",
@@ -86,7 +98,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "End Suction Norm",
+    name: "End Suction Pump Norm",
     category: "industrial",
     image: "/images/products/industrial/end-suction-norm.jpg",
     slug: "end-suction-norm",
@@ -103,7 +115,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Horizontal MH MHI MBI MBN",
+    name: "Horizontal Multistage Centrifugal Pump MH MHI MBI MBN",
     category: "industrial",
     image: "/images/products/industrial/horizontal-mh-mhi-mbi-mbn.jpg",
     slug: "horizontal-mh-mhi-mbi-mbn",
@@ -120,7 +132,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Monobloc MB MBS",
+    name: "Monobloc Pump MB MBS",
     category: "industrial",
     image: "/images/products/industrial/monobloc-mb-mbs.jpg",
     slug: "monobloc-mb-mbs",
@@ -137,7 +149,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Multistage KAT",
+    name: "Centrifugal Multi Stage Pump KAT",
     category: "industrial",
     image: "/images/products/industrial/multistage-kat.jpg",
     slug: "multistage-kat",
@@ -154,7 +166,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Single Stage MEP",
+    name: "Single Stage End Suction Pump MEP",
     category: "industrial",
     image: "/images/products/industrial/single-stage-mep.jpg",
     slug: "single-stage-mep",
@@ -171,7 +183,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Split Case CEP",
+    name: "Split Case Pump CEP",
     category: "industrial",
     image: "/images/products/industrial/split-case-cep.jpg",
     slug: "split-case-cep",
@@ -188,7 +200,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Split Case HS HT",
+    name: "Split Case Pump HS & HST",
     category: "industrial",
     image: "/images/products/industrial/split-case-hs-ht.jpg",
     slug: "split-case-hs-ht",
@@ -224,7 +236,7 @@ export const products: Product[] = [
 
   // Booster Pumps (2)
   {
-    name: "Drive Booster Package",
+    name: "Drive_Booster Pump Package",
     category: "booster",
     image: "/images/products/booster/drive-booster-package.jpg",
     slug: "drive-booster-package",
@@ -241,7 +253,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Silent Booster MSS",
+    name: "Silent Booster Pump MSS series",
     category: "booster",
     image: "/images/products/booster/silent-booster-mss.jpg",
     slug: "silent-booster-mss",
@@ -289,7 +301,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "ULFM Fire Pump",
+    name: "ULFM Fire Pump Masflo",
     category: "fire",
     image: "/images/products/fire/ulfm-fire-pump.jpg",
     slug: "ulfm-fire-pump",
@@ -316,7 +328,7 @@ export const products: Product[] = [
 
   // Sewage & Wastewater (9)
   {
-    name: "Sewage CAP",
+    name: "Sewage Pump - CAP",
     category: "sewage",
     image: "/images/products/sewage/sewage-cap.jpg",
     slug: "sewage-cap",
@@ -333,7 +345,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Sewage DAC SC Y",
+    name: "Sewage Pump DAC - SC/Y",
     category: "sewage",
     image: "/images/products/sewage/sewage-dac-sc-y.jpg",
     slug: "sewage-dac-sc-y",
@@ -350,7 +362,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Sewage DAS",
+    name: "Sewage Pump DAS",
     category: "sewage",
     image: "/images/products/sewage/sewage-das.jpg",
     slug: "sewage-das",
@@ -367,7 +379,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Sewage DSB DHS",
+    name: "Sewage Pump DSB - DHS",
     category: "sewage",
     image: "/images/products/sewage/sewage-dsb-dhs.jpg",
     slug: "sewage-dsb-dhs",
@@ -384,7 +396,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Sewage Grinder PARPO",
+    name: "Sewage Pump Grinder PARPO",
     category: "sewage",
     image: "/images/products/sewage/sewage-grinder-parpo.jpg",
     slug: "sewage-grinder-parpo",
@@ -401,7 +413,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Sewage Large MSL",
+    name: "Sewage Pump Large Size – MSL",
     category: "sewage",
     image: "/images/products/sewage/sewage-large-msl.jpg",
     slug: "sewage-large-msl",
@@ -418,7 +430,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Sewage MS",
+    name: "Submersible Sewage Pump MS, MSI",
     category: "sewage",
     image: "/images/products/sewage/sewage-ms.jpg",
     slug: "sewage-ms",
@@ -435,7 +447,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Sewage Submersible",
+    name: "Sewage Submersible Pump",
     category: "sewage",
     image: "/images/products/sewage/sewage-submersible.jpg",
     slug: "sewage-submersible",
@@ -452,7 +464,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Sewage XD Series",
+    name: "Sewage Pump XD-SD-SV-SVN-SC-GD",
     category: "sewage",
     image: "/images/products/sewage/sewage-xd-series.jpg",
     slug: "sewage-xd-series",
@@ -471,7 +483,7 @@ export const products: Product[] = [
 
   // Vertical & Inline Pumps (6)
   {
-    name: "Vertical Centrifugal MIP",
+    name: "Vertical Centrifugal Pump MIP",
     category: "vertical-inline",
     image: "/images/products/vertical-inline/vertical-centrifugal-mip.jpg",
     slug: "vertical-centrifugal-mip",
@@ -488,7 +500,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Vertical Inline MIL",
+    name: "Vertical In Line Pump MIL",
     category: "vertical-inline",
     image: "/images/products/vertical-inline/vertical-inline-mil.jpg",
     slug: "vertical-inline-mil",
@@ -505,7 +517,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Vertical Multistage MV MVI MVN",
+    name: "Vertical Multistage Pump MV - MVI - MVN",
     category: "vertical-inline",
     image:
       "/images/products/vertical-inline/vertical-multistage-mv-mvi-mvn.jpg",
@@ -523,7 +535,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Vertical Multistage MV MVI",
+    name: "Vertical Multistage Pump MV - MVI",
     category: "vertical-inline",
     image: "/images/products/vertical-inline/vertical-multistage-mv-mvi.jpg",
     slug: "vertical-multistage-mv-mvi",
@@ -540,7 +552,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Vertical Multistage Stainless",
+    name: "Vertical Multistage Stainless Steel Pump MV",
     category: "vertical-inline",
     image: "/images/products/vertical-inline/vertical-multistage-stainless.jpg",
     slug: "vertical-multistage-stainless",
@@ -557,7 +569,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Vertical Multistage XVM",
+    name: "Vertical Multistage Pump XVM",
     category: "vertical-inline",
     image: "/images/products/vertical-inline/vertical-multistage-xvm.jpg",
     slug: "vertical-multistage-xvm",
@@ -576,7 +588,7 @@ export const products: Product[] = [
 
   // Submersible Pumps (6)
   {
-    name: "Mixed Flow Axial DAC",
+    name: "Submersible Mixed flow & Axial Pump – DAC",
     category: "submersible",
     image: "/images/products/submersible/mixed-flow-axial-dac.jpg",
     slug: "mixed-flow-axial-dac",
@@ -594,7 +606,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Propeller DAC EK",
+    name: "Propeller Pump DAC - EK",
     category: "submersible",
     image: "/images/products/submersible/propeller-dac-ek.jpg",
     slug: "propeller-dac-ek",
@@ -615,7 +627,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Turbine Pump EKS",
+    name: "Vertical Turbine Pump EKS",
     category: "submersible",
     image: "/images/products/submersible/turbine-pump-eks.jpg",
     slug: "turbine-pump-eks",
@@ -632,7 +644,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Turbine Pump MVP",
+    name: "Vertical Turbine Pump MVP",
     category: "submersible",
     image: "/images/products/submersible/turbine-pump-mvp.jpg",
     slug: "turbine-pump-mvp",
@@ -650,7 +662,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Turbine Pump",
+    name: "Vertical Turbine Pump",
     category: "submersible",
     image: "/images/products/submersible/turbine-pump.jpg",
     slug: "turbine-pump",
@@ -667,7 +679,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: "Well Pump MP",
+    name: "Well Pump - MP",
     category: "submersible",
     image: "/images/products/submersible/well-pump-mp.jpg",
     slug: "well-pump-mp",
