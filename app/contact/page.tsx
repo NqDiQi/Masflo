@@ -60,7 +60,7 @@ export default function ContactPage() {
             <iframe
               src={
                 isVI
-                  ? "https://www.google.com/maps?q=590%2F2%2F4%20Phan%20Van%20Tri%20Ho%20Chi%20Minh&output=embed"
+                  ? "https://www.google.com/maps?q=590/2/4+Phan+Van+Tri,+Phuong+7,+Go+Vap,+Ho+Chi+Minh,+Vietnam&output=embed"
                   : "https://www.google.com/maps?q=133%20Av.%20Jean%20Jaurès%2075019%20Paris&output=embed"
               }
               loading="lazy"
