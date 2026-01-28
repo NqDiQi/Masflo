@@ -37,20 +37,25 @@ export default function Header() {
             </button>
 
             <div className="product-dropdown">
-              <Link href="/products/industrial">
+              <Link href="/products/industry">
                 {isVI ? "Bơm công nghiệp" : "Industrial Pumps"}
               </Link>
-              <Link href="/products/booster">
-                {isVI ? "Bơm tăng áp" : "Booster & Pressure"}
+              <Link href="/products/domestic">
+                {isVI ? "Bơm dân dụng" : "Domestic Pumps"}
+              </Link>
+              <Link href="/products/building">
+                {isVI
+                  ? "Bơm cho công trình & dịch vụ"
+                  : "Building & Services Pumps"}
+              </Link>
+              <Link href="/products/water">
+                {isVI ? "Bơm quản lý nước" : "Water Management Pumps"}
+              </Link>
+              <Link href="/products/agriculture">
+                {isVI ? "Bơm nông nghiệp" : "Agricultural Pumps"}
               </Link>
               <Link href="/products/fire">
-                {isVI ? "Bơm chữa cháy" : "Fire Fighting"}
-              </Link>
-              <Link href="/products/sewage">
-                {isVI ? "Bơm nước thải" : "Sewage & Wastewater"}
-              </Link>
-              <Link href="/products/submersible">
-                {isVI ? "Bơm chìm" : "Submersible Pumps"}
+                {isVI ? "Bơm chữa cháy" : "Fire Fighting Pumps"}
               </Link>
             </div>
           </div>

@@ -1,15 +1,27 @@
 export const productCategories = [
   {
-    key: "industrial",
-    title: "Industrial Pumps",
+    key: "industry",
+    title: "Industry Pumps",
     titleVI: "Bơm công nghiệp",
     background: "/images/banners/industrial.jpg",
   },
   {
-    key: "booster",
-    title: "Booster Pumps",
-    titleVI: "Bơm tăng áp",
+    key: "domestic",
+    title: "Domestic Pumps",
+    titleVI: "Bơm dân dụng",
     background: "/images/banners/booster.jpg",
+  },
+  {
+    key: "building",
+    title: "Pumps for Building & Services",
+    titleVI: "Bơm cho công trình & dịch vụ",
+    background: "/images/banners/submersible.jpg",
+  },
+  {
+    key: "water",
+    title: "Pumps for Water Management",
+    titleVI: "Bơm quản lý nước",
+    background: "/images/banners/sewage.jpg",
   },
   {
     key: "fire",
@@ -18,21 +30,9 @@ export const productCategories = [
     background: "/images/banners/fire.jpg",
   },
   {
-    key: "sewage",
-    title: "Sewage Pumps",
-    titleVI: "Bơm nước thải",
-    background: "/images/banners/sewage.jpg",
-  },
-  {
-    key: "vertical-inline",
-    title: "Vertical Inline Pumps",
-    titleVI: "Bơm trục đứng Inline",
-    background: "/images/banners/vertical-inline.jpg",
-  },
-  {
-    key: "submersible",
-    title: "Submersible Pumps",
-    titleVI: "Bơm chìm",
-    background: "/images/banners/submersible.jpg",
+    key: "agriculture",
+    title: "Agriculture Pumps",
+    titleVI: "Bơm nông nghiệp",
+    background: "/images/banners/farm.jpg",
   },
 ];

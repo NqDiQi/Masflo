@@ -10,8 +10,15 @@
 
 html,
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
   color: #0a2540;
   background: #ffffff;
   line-height: 1.5;
@@ -690,7 +697,9 @@ a:hover {
 .fade-up {
   opacity: 0;
   transform: translateY(24px) scale(0.98);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .fade-up.show {
@@ -701,7 +710,9 @@ a:hover {
 .reveal {
   opacity: 0;
   transform: translateY(24px) scale(0.98);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .reveal.show {
@@ -729,7 +740,9 @@ a:hover {
 .contact-hidden {
   opacity: 0;
   transform: scale(0.97) translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .contact-show {
@@ -750,7 +763,9 @@ a:hover {
 .hero-content h1 {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .hero-show .hero-content h1 {
@@ -761,7 +776,9 @@ a:hover {
 .hero-content p {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s;
+  transition:
+    opacity 0.8s ease 0.15s,
+    transform 0.8s ease 0.15s;
 }
 
 .hero-show .hero-content p {
@@ -790,7 +807,9 @@ a:hover {
 .reveal {
   opacity: 0;
   transform: translateY(32px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
 .reveal-show {
@@ -848,7 +867,9 @@ a:hover {
   align-items: center;
   text-align: center;
 
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .explore-card:hover {
@@ -952,57 +973,42 @@ a:hover {
   color: #ffffff;
   font-weight: 700;
 }
-/* ===== APPLICATIONS SECTION ===== */
+/* ===== APPLICATION CAROUSEL ===== */
 
-.applications-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 32px;
+.applications-carousel {
+  width: 100%;
+  overflow: hidden;
 }
 
-.application-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 36px 24px;
-  text-align: center;
-  border: 1px solid #e5e7eb;
-  transition: all 0.25s ease;
-}
-
-.application-card:hover {
-  transform: translateY(-6px);
-  border-color: #0b5ed7;
-  box-shadow: 0 20px 40px rgba(11, 94, 215, 0.15);
-}
-
-.application-icon {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 18px;
-
+.applications-track {
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #e6f0ff;
-  border-radius: 18px;
-  color: #0b5ed7;
+  gap: 20px;
+  width: max-content;
 }
 
-.application-card p {
-  font-size: 15px;
-  font-weight: 500;
-  color: #1f2937;
-}
-/* ===== APPLICATIONS – HORIZONTAL (MAX 5) ===== */
-
-.applications-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 24px;
+/* ===== AUTO SCROLL ===== */
+.auto-scroll .applications-track {
+  animation: scroll-x 35s linear infinite;
 }
 
+/* Pause when hover */
+.applications-carousel:hover .applications-track {
+  animation-play-state: paused;
+}
+
+/* ===== KEYFRAMES ===== */
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== CARD ===== */
 .application-card {
+  flex: 0 0 160px;
   background: #ffffff;
   border-radius: 18px;
   padding: 28px 20px;
@@ -1021,11 +1027,9 @@ a:hover {
   width: 64px;
   height: 64px;
   margin: 0 auto 14px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: #e6f0ff;
   border-radius: 16px;
   color: #0b5ed7;
@@ -1037,6 +1041,8 @@ a:hover {
   color: #1f2937;
   line-height: 1.4;
 }
+
+/* ===== PAGE ANIMATION ===== */
 @keyframes slideInPage {
   from {
     opacity: 0;
@@ -1051,6 +1057,7 @@ a:hover {
 .product-detail-page {
   animation: slideInPage 0.8s ease-out;
 }
+
 /* ===============================
    LANGUAGE SWITCH
 =============================== */
@@ -1080,7 +1087,9 @@ a:hover {
 .lang-btn img {
   border-radius: 4px;
   opacity: 0.4;
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
 }
 
 .lang-btn img.active {
@@ -1090,4 +1099,35 @@ a:hover {
 .lang-btn:hover img {
   opacity: 1;
   transform: translateY(-1px);
+}
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* QUAN TRỌNG */
+}
+
+.spec-table th,
+.spec-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.spec-table thead th {
+  font-weight: 600;
+  background: #f8fafc;
+}
+/* Cột Part */
+.spec-table th:first-child,
+.spec-table td:first-child {
+  width: 32%;
+  font-weight: 500;
+}
+
+/* Type C / S / N */
+.spec-table th:not(:first-child),
+.spec-table td:not(:first-child) {
+  width: 22.66%;
 }

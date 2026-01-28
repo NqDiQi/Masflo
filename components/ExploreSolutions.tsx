@@ -7,24 +7,24 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const pumps = [
   {
-    title: { en: "Industrial Pumps", vi: "Bơm công nghiệp" },
+    title: { en: "Industry", vi: "Công nghiệp" },
     image: "/products/industrial-pump.png",
-    href: "/products/industrial",
+    href: "/products/industry",
   },
   {
-    title: { en: "Booster Pumps", vi: "Bơm tăng áp" },
-    image: "/products/booster-pump.png",
-    href: "/products/booster",
+    title: { en: "Domestic", vi: "Xử lý nước sinh hoạt" },
+    image: "/products/domestic.jpg",
+    href: "/products/domestic",
   },
   {
-    title: { en: "Fire Pump Sets", vi: "Hệ bơm chữa cháy" },
+    title: { en: "Building & Services", vi: "Công trình xây dựng & dịch vụ" },
     image: "/products/fire-pump.png",
-    href: "/products/fire",
+    href: "/products/building",
   },
   {
-    title: { en: "Sewage Pumps", vi: "Bơm nước thải" },
+    title: { en: "Water Management", vi: "Quản lý dòng nước" },
     image: "/products/sewage-pump.png",
-    href: "/products/sewage",
+    href: "/products/water",
   },
 ];
 

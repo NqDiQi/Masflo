@@ -12,12 +12,17 @@ export default function ProductsPage() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<"az" | "za">("az");
 
-  const filteredProducts = products
+  // 👉 loại bỏ trùng theo slug, giữ lại bản cuối cùng (bạn có thể sắp xếp products trước để ưu tiên category chính)
+  const uniqueProducts = Array.from(
+    new Map(products.map((p) => [p.slug, p])).values(),
+  );
+
+  const filteredProducts = uniqueProducts
     .filter((p) => p.name.toLowerCase().includes(search.toLowerCase()))
     .sort((a, b) =>
       sort === "az"
         ? a.name.localeCompare(b.name)
-        : b.name.localeCompare(a.name)
+        : b.name.localeCompare(a.name),
     );
 
   return (
