@@ -2,7 +2,6 @@ import { products } from "@/data/products";
 import Image from "next/image";
 import {
   Factory,
-  Home,
   Droplets,
   Waves,
   Droplet,
@@ -15,29 +14,41 @@ import {
   Building2,
   Snowflake,
   GlassWater,
-  HousePlug,
-  Fuel,
   Scroll,
+  Leaf,
+  Plug,
+  FlaskConical,
+  Building,
 } from "lucide-react";
 
 /* ===== APPLICATION ICON MAP ===== */
 const applicationIconMap: Record<string, LucideIcon> = {
   Industry: Factory,
-  "Industrial and domestic pressure boosting": Home,
+  "Residential buildings": Building2,
   "Water supply in buildings and irrigation": Droplet,
-  "Boiler feed": Cylinder,
   "Sprinkler irrigation systems": Droplets,
+  "Boiler feed": Cylinder,
   "Fire fighting systems": FireExtinguisher,
   "Hot & cold water and coolant circulation": RefreshCw,
   "DM plant": Atom,
   "Reverse osmosis (RO)": Filter,
   "Industrial washing": Waves,
-  "Residential buildings": Building2,
   "Cooling water": Snowflake,
   "Drinking water facilities": GlassWater,
-  "Energy facilities": HousePlug,
-  "Chemical and petrochemical plants": Fuel,
+  "Energy facilities": Plug,
+  "Chemical and petrochemical plants": FlaskConical,
   "Paper industry": Scroll,
+  "Agricultural irrigation and sprinkler systems": Leaf,
+  "Waste water treatment plants": FlaskConical,
+  "Textile dyeing machines": Building,
+  "Power plants": Plug,
+  "Fish farms": Leaf,
+  Dewatering: Droplet,
+  "High-rise complexes": Building2,
+  Warehouses: Building,
+  Hospitals: Building2,
+  Airports: Building,
+  "Commercial buildings": Building2,
 };
 
 function getApplicationIcon(app: string) {
@@ -126,7 +137,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
       </main>
 
       {/* ===== APPLICATIONS ===== */}
-      {product.applications && (
+      {product.applications && product.applications.length > 0 && (
         <section style={{ background: "#eaf6fc" }}>
           <div
             style={{
@@ -145,19 +156,17 @@ export default async function ProductDetailPage({ params }: PageProps) {
               }`}
             >
               <div className="applications-track">
-                {[...product.applications, ...product.applications].map(
-                  (a, i) => {
-                    const Icon = getApplicationIcon(a);
-                    return (
-                      <div className="application-card" key={`${a}-${i}`}>
-                        <div className="application-icon">
-                          <Icon size={36} strokeWidth={1.6} />
-                        </div>
-                        <p>{a}</p>
+                {Array.from(new Set(product.applications)).map((a, i) => {
+                  const Icon = getApplicationIcon(a);
+                  return (
+                    <div className="application-card" key={`${a}-${i}`}>
+                      <div className="application-icon">
+                        <Icon size={36} strokeWidth={1.6} />
                       </div>
-                    );
-                  },
-                )}
+                      <p>{a}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
