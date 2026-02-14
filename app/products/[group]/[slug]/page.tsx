@@ -14,7 +14,6 @@ export default function ProductDetailPage() {
   const group = params.group as string;
   const slug = params.slug as string;
 
-  // ===== SELECT PRODUCT LIST BY LANGUAGE =====
   const productList = language === "vi" ? productsVi : productsEn;
 
   const product = productList.find(
@@ -30,6 +29,8 @@ export default function ProductDetailPage() {
       </main>
     );
   }
+
+  const material = product.material;
 
   return (
     <div className="product-detail-page">
@@ -159,21 +160,16 @@ export default function ProductDetailPage() {
       )}
 
       {/* ================= MATERIAL ================= */}
-      {product.material?.mode === "simple" && (
+      {material?.mode === "simple" && (
         <section
-          style={{
-            maxWidth: "1200px",
-            margin: "64px auto",
-            padding: "0 32px",
-          }}
+          style={{ maxWidth: "1200px", margin: "64px auto", padding: "0 32px" }}
         >
           <h2>
             {language === "vi" ? "Vật liệu chế tạo" : "Material Construction"}
           </h2>
-
           <table className="spec-table">
             <tbody>
-              {product.material.items.map((item) => (
+              {material.items.map((item) => (
                 <tr key={item.part}>
                   <td>{item.part}</td>
                   <td>{item.material ?? "-"}</td>
@@ -184,18 +180,13 @@ export default function ProductDetailPage() {
         </section>
       )}
 
-      {product.material?.mode === "typed" && (
+      {material?.mode === "typed" && (
         <section
-          style={{
-            maxWidth: "1200px",
-            margin: "64px auto",
-            padding: "0 32px",
-          }}
+          style={{ maxWidth: "1200px", margin: "64px auto", padding: "0 32px" }}
         >
           <h2>
             {language === "vi" ? "Vật liệu chế tạo" : "Material Construction"}
           </h2>
-
           <table className="spec-table">
             <thead>
               <tr>
@@ -206,7 +197,7 @@ export default function ProductDetailPage() {
               </tr>
             </thead>
             <tbody>
-              {product.material.items.map((item) => (
+              {material.items.map((item) => (
                 <tr key={item.part}>
                   <td>{item.part}</td>
                   <td>{item.typeC ?? "-"}</td>
@@ -219,32 +210,27 @@ export default function ProductDetailPage() {
         </section>
       )}
 
-      {product.material?.mode === "versioned" && (
+      {material?.mode === "versioned" && (
         <section
-          style={{
-            maxWidth: "1200px",
-            margin: "64px auto",
-            padding: "0 32px",
-          }}
+          style={{ maxWidth: "1200px", margin: "64px auto", padding: "0 32px" }}
         >
           <h2>
             {language === "vi" ? "Vật liệu chế tạo" : "Material Construction"}
           </h2>
-
           <table className="spec-table">
             <thead>
               <tr>
                 <th>{language === "vi" ? "Bộ phận" : "Component"}</th>
-                {product.material.versions.map((v) => (
+                {material.versions.map((v: string) => (
                   <th key={v}>{v}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {product.material.items.map((item) => (
+              {material.items.map((item) => (
                 <tr key={item.part}>
                   <td>{item.part}</td>
-                  {product.material.versions.map((v) => (
+                  {material.versions.map((v: string) => (
                     <td key={v}>{item.values?.[v] ?? "-"}</td>
                   ))}
                 </tr>
