@@ -980,19 +980,22 @@ a:hover {
   overflow: hidden;
 }
 
+/* Track mặc định: đứng yên */
 .applications-track {
   display: flex;
   gap: 20px;
-  width: max-content;
+  justify-content: center; /* ít item sẽ tự căn giữa */
 }
 
 /* ===== AUTO SCROLL ===== */
-.auto-scroll .applications-track {
+.applications-carousel.auto-scroll .applications-track {
+  width: max-content;
+  justify-content: flex-start;
   animation: scroll-x 35s linear infinite;
 }
 
-/* Pause when hover */
-.applications-carousel:hover .applications-track {
+/* Pause khi hover (chỉ khi có auto-scroll) */
+.applications-carousel.auto-scroll:hover .applications-track {
   animation-play-state: paused;
 }
 

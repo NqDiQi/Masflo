@@ -718,11 +718,13 @@ export const products: Product[] = [
       "Certified UL Listed and FM Approved fire pump sets built with NORM and CEP pumps. Available with electric or diesel drives, equipped with jockey pumps for constant pressure, ensuring safe and reliable fire protection for commercial and industrial facilities.",
     applications: [
       "Commercial buildings",
-      "Industrial facilities",
+      "Industry",
       "Warehouses",
       "Hospitals",
       "Airports",
       "High-rise complexes",
+      "Fire fighting systems",
+      "Fire hydrants",
     ],
 
     specs: [
@@ -785,13 +787,13 @@ export const products: Product[] = [
     usage:
       "Turbosan DAC-SC and DAS Series submersible pumps are designed for pumping sewage and waste water containing solids, ensuring reliable operation in treatment plants and industrial facilities.",
     applications: [
-      "Domestic and industrial raw sewage water pumping",
       "Waste water treatment plants",
-      "Biological cleaning plants (active sludge)",
-      "Settlement pools with floating solids",
-      "Industrial and chemical waste water",
-      "Rain water drainage",
-      "General dewatering in industrial plants",
+      "Dewatering",
+      "Industry",
+      "Chemical and petrochemical plants",
+      "Paper industry",
+      "Energy facilities",
+      "Power plants",
     ],
     specs: [
       "Submersible sewage pump design",
@@ -834,13 +836,13 @@ export const products: Product[] = [
     usage:
       "Turbosan DAC-SC and DAS Series submersible pumps are designed for pumping sewage and waste water containing solids, ensuring reliable operation in treatment plants and industrial facilities.",
     applications: [
-      "Domestic and industrial raw sewage water pumping",
       "Waste water treatment plants",
-      "Biological cleaning plants (active sludge)",
-      "Settlement pools with floating solids",
-      "Industrial and chemical waste water",
-      "Rain water drainage",
-      "General dewatering in industrial plants",
+      "Dewatering",
+      "Industry",
+      "Chemical and petrochemical plants",
+      "Paper industry",
+      "Energy facilities",
+      "Power plants",
     ],
     specs: [
       "Submersible sewage pump design",
@@ -884,9 +886,8 @@ export const products: Product[] = [
       "Designed for heavy‑duty sewage and wastewater applications, CAP Series pumps handle viscous liquids and solids with ease. They provide continuous, trouble‑free operation for municipal and industrial treatment plants.",
     applications: [
       "Waste water treatment plants",
-      "Industrial facilities",
+      "Industry",
       "Residential buildings",
-      "Domestic and industrial raw sewage water pumping",
     ],
     specs: [
       "Centrifugal sewage and waste water pump design",
@@ -925,9 +926,8 @@ export const products: Product[] = [
       "Designed for heavy‑duty sewage and wastewater applications, CAP Series pumps handle viscous liquids and solids with ease. They provide continuous, trouble‑free operation for municipal and industrial treatment plants.",
     applications: [
       "Waste water treatment plants",
-      "Industrial facilities",
+      "Industry",
       "Residential buildings",
-      "Domestic and industrial raw sewage water pumping",
     ],
     specs: [
       "Centrifugal sewage and waste water pump design",
@@ -1060,14 +1060,10 @@ export const products: Product[] = [
     usage:
       "Turbosan Process Series pumps are single-stage, end-suction, open impeller, volute type pumps designed for low and medium discharge pressure applications with high efficiency.",
     applications: [
-      "Industrial water pumping",
-      "Chemical plants",
-      "Refineries",
-      "Food processing",
-      "Petrochemical plants",
-      "Paper and pulp industry",
-      "Pumping of low viscosity fluids",
-      "Industrial process water containing solids with limited dimensions",
+      "Industry",
+      "Chemical and petrochemical plants",
+      "Energy facilities",
+      "Paper industry",
     ],
     specs: [
       "Single-stage, end-suction design",
@@ -1169,9 +1165,10 @@ export const products: Product[] = [
     applications: [
       "Agricultural irrigation and sprinkler systems",
       "Cooling water",
-      "Water supply in buildings and irrigation",
       "Fish farms",
-      "Dewatering",
+      "Drinking water facilities",
+      "Energy facilities",
+      "Industry",
     ],
     specs: [
       "Vertical suspended construction",
@@ -1194,9 +1191,10 @@ export const products: Product[] = [
     applications: [
       "Agricultural irrigation and sprinkler systems",
       "Cooling water",
-      "Water supply in buildings and irrigation",
       "Fish farms",
-      "Dewatering",
+      "Drinking water facilities",
+      "Energy facilities",
+      "Industry",
     ],
     specs: [
       "Vertical suspended construction",
@@ -1216,7 +1214,16 @@ export const products: Product[] = [
     slug: "submersible-drainage-sewage-pumps",
     usage:
       "Portable submersible pumps for drainage of basements, garages, pools, and rainwater.",
-    applications: ["Basements", "Garages", "Pools", "Rainwater drainage"],
+    applications: [
+      "Basements",
+      "Garages",
+      "Pools",
+      "Rainwater drainage",
+      "Storm water drainage",
+      "Flood control",
+      "Sump & lift stations",
+      "Septic & sewage pits",
+    ],
     specs: [
       "Portable submersible design",
       "Suitable for clean/dirty water without abrasives",
@@ -1235,14 +1242,14 @@ export const products: Product[] = [
     usage:
       "Reliable submersible pumps for sewage and wastewater containing solids. DAS Series ensures uninterrupted operation in industrial facilities and municipal treatment plants, with non‑clogging design and easy service.",
     applications: [
-      "Domestic and industrial raw sewage water pumping",
       "Waste water treatment plants",
-      "Biological cleaning plants (active sludge)",
-      "Settlement pools with floating solids",
-      "Industrial and chemical waste water",
-      "Rain water drainage",
-      "General dewatering in industrial plants",
+      "Municipal wastewater",
+      "Industrial wastewater",
+      "Septic & sewage pits",
+      "Sump & lift stations",
+      "Dewatering",
     ],
+
     specs: [
       "Non-clogging impeller",
       "Handles solids up to Ø200 mm",
@@ -1263,14 +1270,14 @@ export const products: Product[] = [
     usage:
       "Reliable submersible pumps for sewage and wastewater containing solids. DAS Series ensures uninterrupted operation in industrial facilities and municipal treatment plants, with non‑clogging design and easy service.",
     applications: [
-      "Domestic and industrial raw sewage water pumping",
       "Waste water treatment plants",
-      "Biological cleaning plants (active sludge)",
-      "Settlement pools with floating solids",
-      "Industrial and chemical waste water",
-      "Rain water drainage",
-      "General dewatering in industrial plants",
+      "Municipal wastewater",
+      "Industrial wastewater",
+      "Septic & sewage pits",
+      "Sump & lift stations",
+      "Dewatering",
     ],
+
     specs: [
       "Non-clogging impeller",
       "Handles solids up to Ø200 mm",
@@ -1291,12 +1298,13 @@ export const products: Product[] = [
     usage:
       "Heavy‑duty submersible pumps equipped with grinder blades, designed to handle sewage and wastewater with solids. PARPO Series ensures reliable operation in municipal, residential, and agricultural applications where clogging risk is high.",
     applications: [
-      "Water supply in buildings and irrigation",
-      "Agricultural irrigation and sprinkler systems",
-      "Cooling water",
-      "Fish farms",
-      "Domestic and industrial raw sewage water pumping",
+      "Industrial wastewater",
+      "Municipal wastewater",
       "Waste water treatment plants",
+      "Septic & sewage pits",
+      "Sump & lift stations",
+      "Storm water drainage",
+      "Flood control",
     ],
     specs: [
       "Equipped with grinder blade for solids handling",

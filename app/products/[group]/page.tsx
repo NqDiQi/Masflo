@@ -1,4 +1,4 @@
-import { products } from "@/data/products";
+import { products } from "@/data/products.en";
 import { productCategories } from "@/data/productCategories";
 import ProductCard from "@/components/ProductCard";
 import CategoryBannerTitle from "@/components/CategoryBannerTitle";

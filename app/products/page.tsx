@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { products } from "@/data/products";
+import { products } from "@/data/products.en";
 import ProductCard from "@/components/ProductCard";
 import { useLanguage } from "@/context/LanguageContext";
 
